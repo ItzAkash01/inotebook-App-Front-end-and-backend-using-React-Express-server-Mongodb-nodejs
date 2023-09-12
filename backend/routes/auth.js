@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 const express = require("express");
 const User = require("../models/User");
@@ -98,7 +99,7 @@ router.post(
         },
       };
       const authtoken = jwt.sign(data, JWT_SECRET);
-      res.json(authtoken);
+      res.json({authtoken});
     } catch (error) {
       console.error(error.message);
       res.status(500).send("internal error occured");
