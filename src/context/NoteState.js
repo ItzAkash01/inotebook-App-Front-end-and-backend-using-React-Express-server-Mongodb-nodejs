@@ -6,15 +6,15 @@ const NoteState =(props)=>{
 const notesInitial = [
 {
 
-"_id":"61322f195533781a8cad0e0651",
-"user":"6131dc5e3e40637dcjh4734a068",
+"_id":"61322f195533781rea8cad0e0651",
+"user":"6131dc5e3e40637djh4734a068",
 "title":"My title",
 "description":"please wake up early",
 "tag":"personal",
 },
 {
 
-    "_id":"613322f19553781a8cad0e0652",
+    "_id":"6133er22f19553781a8cad0e0652",
     "user":"6131dc5e3e406sd37dc4734a068",
     "title":"My title",
     "description":"please wake up early",
@@ -22,7 +22,7 @@ const notesInitial = [
     },
     {
 
-        "_id":"613322f19553781a8cad0e0653",
+        "_id":"613322trf19553781a8cad0e0653",
         "user":"6131dc5e3hge40637dc4734a068",
         "title":"My title",
         "description":"please wake up early",
@@ -31,7 +31,7 @@ const notesInitial = [
 ,
 {
 
-    "_id":"613223f19553781a8cad0e0654",
+    "_id":"613223f19553e781a8cad0e0654",
     "user":"6131dfdc5e3e40637dc4734a068",
     "title":"My title",
     "description":"please wake up early",
@@ -40,7 +40,7 @@ const notesInitial = [
 ,
 {
 
-    "_id":"611322f19553781a8cad0e0655",
+    "_id":"61rt1322f19553781a8cad0e0655",
     "user":"6131dc5e3gfe40637dc4734a068",
     "title":"My title",
     "description":"please wake up early",
@@ -48,7 +48,7 @@ const notesInitial = [
     },
     {
 
-        "_id":"61322f139553781a8cad0e0656",
+        "_id":"613sa22f139553781a8cad0e0656",
         "user":"6131dc5safe3e40637dc4734a068",
         "title":"My title",
         "description":"please wake up early",
@@ -65,7 +65,7 @@ const notesInitial = [
     },
     {
 
-        "_id":"61322f193553781a8cad0e0658",
+        "_id":"61322f19353453781a8cad0e0658",
         "user":"6131dc5e3e40637dc4d7ds34a068",
         "title":"My title",
         "description":"please wake up early",
@@ -102,8 +102,50 @@ const notesInitial = [
 
 
 const [notes, setNotes] = useState(notesInitial);
+
+//add a note
+const addNote=(title,description,tag)=>{
+//todo api
+console.log("adding a new note")
+    const note={
+        "_id":"61322f193553781a8cad0e0658",
+        "user":"6131dc5e3e40637dc4d7ds34a068",
+        "title":title,
+        "description":description,
+        "tag":tag
+    };
+    setNotes(notes.concat(note))
+}
+
+
+//delete a note
+const deleteNote=()=>{
+
+}
+
+//edit a note
+const editNote=()=>{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 return(
-<noteContext.Provider value={{notes}}>
+<noteContext.Provider value={{notes,addNote,deleteNote,editNote}}>
     {props.children}
 </noteContext.Provider>
 
