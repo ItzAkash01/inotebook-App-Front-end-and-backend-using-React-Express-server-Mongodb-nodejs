@@ -3,6 +3,7 @@ import noteContext from "./noteContext";
 import { useState } from "react";
 const NoteState =(props)=>{
 
+    const host = "http://localjost:5000"
 const notesInitial = [
 {
 
@@ -119,19 +120,19 @@ console.log("adding a new note")
 
 
 //delete a note
-const deleteNote=()=>{
-
+const deleteNote=(id)=>{
+console.log("deleting the note with id" + id);
+const newNotes = notes.filter((note)=>{return note._id!==id})
+setNotes( newNotes)
 }
 
 //edit a note
-const editNote=()=>{
+// s
+  //api call
+  
 
-}
-
-
-
-
-
+//logic to edit in client{
+// ss
 
 
 
@@ -145,7 +146,7 @@ const editNote=()=>{
 
 
 return(
-<noteContext.Provider value={{notes,addNote,deleteNote,editNote}}>
+<noteContext.Provider value={{notes,addNote,deleteNote}}>
     {props.children}
 </noteContext.Provider>
 
